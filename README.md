@@ -8,31 +8,32 @@ Projeto desenvolvido para a disciplina de **Análise e Projeto de Algoritmos** d
 
 ## Objetivo
 
-Desenvolver um sistema capaz de selecionar o maior número possível de atividades sem conflito de horários, além de comparar diferentes abordagens algorítmicas para o problema.
+> Desenvolver um sistema capaz de selecionar o maior número possível de atividades sem conflito de horários, além de comparar diferentes abordagens algorítmicas para o problema.
+***
 
 ## Caso de uso
-Uma empresa organiza diariamente treinamentos, palestras e reuniões. Entretanto muitas atividades possuem conflito
+> Uma empresa organiza diariamente treinamentos, palestras e reuniões. Entretanto muitas atividades possuem conflito
 de horário, dificultando o planejamento adequado da agenda.
 Diante disso, a empresa deseja desenvolver um sistema capaz de selecionar o maior número possível de atividades
 sem sobreposição de horários.
 
 **Além disso, o sistema deverá permitir:**
-• Organização das atividades
-• Busca de atividades
-• Comparação entre as soluções
-• Análise de desempenho dos algoritmos
+- Organização das atividades
+- Busca de atividades
+- Comparação entre as soluções
+- Análise de desempenho dos algoritmos
 
 **Cada atividade possui:**
-• Código da atividade
-• Nome da atividade
-• Horário de início
-• Horário de fim
-• Prioridade
-• Quantidade de participantes
+- Código da atividade
+- Nome da atividade
+- Horário de início
+- Horário de fim
+- Prioridade
+- Quantidade de participantes
 
-O sistema deverá determinar quais atividades podem ser selecionadas sem conflito de horários.
-O sistema deverá possuir funcionalidades como: cadastro de atividades, organização de atividades (ordenar atividades
-por horário de início, horário de término e prioridade), seleção de atividades e comparação entre estratégias utilizadas.
+> O sistema deverá determinar quais atividades podem ser selecionadas sem conflito de horários.
+> O sistema deverá possuir funcionalidades como: cadastro de atividades, organização de atividades (ordenar atividades
+> por horário de início, horário de término e prioridade), seleção de atividades e comparação entre estratégias utilizadas.
 
 ## Funcionalidades
 
