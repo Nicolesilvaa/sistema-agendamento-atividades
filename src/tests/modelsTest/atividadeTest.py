@@ -1,5 +1,4 @@
 from datetime import time
-
 from src.models.atividade import Atividade
 from src.utils.prioridade import Prioridade
 
@@ -25,7 +24,7 @@ def testarValidacaoHorario():
 
         atividade = Atividade(
             nome="Atividade Inválida",
-            horarioInicio=time(15, 0),
+            horarioInicio=time.now(),
             horarioFim=time(10, 0),
             prioridade=Prioridade.MEDIA,
             quantidadeParticipantes=10
