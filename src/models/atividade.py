@@ -60,7 +60,7 @@ class Atividade:
     def setQuantidadeParticipantes(self, quantidadeParticipantes):
         self.__quantidadeParticipantes = quantidadeParticipantes
     
-        
+
     def __str__(self):
 
             return (
