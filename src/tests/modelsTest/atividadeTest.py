@@ -1,7 +1,6 @@
 from datetime import time
-
-from src.models.atividade import Atividade
-from src.utils.prioridade import Prioridade
+from src.models.Atividade import Atividade
+from src.utils.Prioridade import Prioridade
 
 def testarCriacaoAtividade():
 

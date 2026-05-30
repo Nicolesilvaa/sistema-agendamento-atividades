@@ -1,22 +1,22 @@
-def merge_sort(lista):
+def merge_sort(lista, chave=lambda x: x):
     if len(lista) <= 1:
         return lista
 
     meio = len(lista) // 2
 
-    esquerda = merge_sort(lista[:meio])
-    direita = merge_sort(lista[meio:])
+    esquerda = merge_sort(lista[:meio], chave)
+    direita = merge_sort(lista[meio:], chave)
 
-    return merge(esquerda, direita)
+    return merge(esquerda, direita, chave)
 
 
-def merge(esquerda, direita):
+def merge(esquerda, direita, chave):
     resultado = []
     i = 0
     j = 0
 
     while i < len(esquerda) and j < len(direita):
-        if esquerda[i] < direita[j]:
+        if chave(esquerda[i]) <= chave(direita[j]):
             resultado.append(esquerda[i])
             i += 1
         else:
@@ -27,4 +27,3 @@ def merge(esquerda, direita):
     resultado.extend(direita[j:])
 
     return resultado
-
