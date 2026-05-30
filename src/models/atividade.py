@@ -1,4 +1,4 @@
-from src.utils.Prioridade import Prioridade
+from src.utils.prioridade import Prioridade
 
 import time
 import uuid
