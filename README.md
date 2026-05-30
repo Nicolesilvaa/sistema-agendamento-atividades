@@ -1,4 +1,4 @@
-# Seleção Ótima de Atividades
+# SistemaAgendamentoAtividades
 
 Projeto desenvolvido para a disciplina de **Análise e Projeto de Algoritmos** da Universidade Federal da Bahia (UFBA - 2026.1).
 
@@ -64,4 +64,4 @@ O sistema será testado com três conjuntos de dados:
 ## Execução
 
 ```bash
-python src/main.py
+python src/Main.py

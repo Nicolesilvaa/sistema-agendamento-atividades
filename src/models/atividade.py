@@ -1,4 +1,4 @@
-from src.utils.prioridade import Prioridade
+from src.utils.Prioridade import Prioridade
 
 import time
 import uuid
@@ -8,7 +8,7 @@ class Atividade:
  
     def __init__(self,  nome:str, horarioInicio:time, horarioFim:time, prioridade:Prioridade, quantidadeParticipantes: int):
 
-        self.codigo = str(uuid.uuid4())[:5]
+        self.__codigo = str(uuid.uuid4())[:5]
 
 
         if horarioInicio >= horarioFim:
@@ -17,11 +17,11 @@ class Atividade:
             )
         
         
-        self.nome = nome
-        self.horarioInicio = horarioInicio
-        self.horarioFim = horarioFim
-        self.prioridade = prioridade
-        self.quantidadeParticipantes = quantidadeParticipantes
+        self.__nome = nome
+        self.__horarioInicio = horarioInicio
+        self.__horarioFim = horarioFim
+        self.__prioridade = prioridade
+        self.__quantidadeParticipantes = quantidadeParticipantes
 
 
 
@@ -64,10 +64,10 @@ class Atividade:
     def __str__(self):
 
             return (
-                f"Atividade(código={self.codigo}, "
-                f"nome='{self.nome}', "
-                f"início='{self.horarioInicio}', "
-                f"fim='{self.horarioFim}', "
-                f"prioridade={self.prioridade}, "
-                f"participantes={self.quantidadeParticipantes})"
+                f"Atividade(código={self.__codigo}, "
+                f"nome='{self.__nome}', "
+                f"início='{self.__horarioInicio}', "
+                f"fim='{self.__horarioFim}', "
+                f"prioridade={self.__prioridade}, "
+                f"participantes={self.__quantidadeParticipantes})"
             )
