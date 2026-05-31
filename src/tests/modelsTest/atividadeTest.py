@@ -2,6 +2,12 @@ from datetime import time
 from src.models.atividade import Atividade
 from src.utils.prioridade import Prioridade
 
+# Códigos de cor ANSI
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+CYAN = "\033[96m"
+RESET = "\033[0m"
+
 def testarCriacaoAtividade():
 
     atividade = Atividade(
@@ -12,14 +18,14 @@ def testarCriacaoAtividade():
         quantidadeParticipantes=30
     )
 
-    print("===== TESTE DE CRIAÇÃO =====")
-    print(atividade)
+    print(f"{YELLOW}===== TESTE DE CRIAÇÃO ====={RESET}")
+    print(f"{CYAN}{atividade}{RESET}")
     print()
 
 
 def testarValidacaoHorario():
 
-    print("===== TESTE DE VALIDAÇÃO DE HORÁRIO =====")
+    print(f"{YELLOW}===== TESTE DE VALIDAÇÃO DE HORÁRIO ====={RESET}")
     try:
 
         atividade = Atividade(
@@ -31,14 +37,14 @@ def testarValidacaoHorario():
         )
 
     except ValueError as erro:
-        print(f"Erro capturado: {erro}")
+        print(f"{GREEN}Sucesso - Erro capturado esperado: {erro}{RESET}")
 
     print()
 
 
 def testarValidacaoPrioridade():
 
-    print("===== TESTE DE VALIDAÇÃO DE PRIORIDADE =====")
+    print(f"{YELLOW}===== TESTE DE VALIDAÇÃO DE PRIORIDADE ====={RESET}")
     try:
 
         atividade = Atividade(
@@ -50,7 +56,7 @@ def testarValidacaoPrioridade():
         )
 
     except TypeError as erro:
-        print(f"Erro capturado: {erro}")
+        print(f"{GREEN}Sucesso - Erro capturado esperado: {erro}{RESET}")
 
     print()
 

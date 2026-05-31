@@ -1,19 +1,41 @@
 from src.models.atividade import Atividade as at
 from datetime import time
+from sorting.MergeSort import merge_sort as msort
 
+def guloso(atividades:list, ordenacao= "fim"):
 
-def guloso(lista= list()):
+    if ordenacao == "prioridade":
+        chave= lambda a:a.getPrioridade()
+    elif ordenacao == "inicio":
+        chave= lambda a:a.getHorarioInicio()
+    elif ordenacao == "fim":
+        chave= lambda a:a.getHorarioFim(0)
     
-    for i in range(len(lista)-1):
-        pass
+    ordenadas = msort(msort(atividades, chave  ))
 
-# Teste 1
+    selecionadas = []
+
+    ultima = None
+
+    for atividade in ordenadas:
+
+        if ultima is None:
+            selecionadas.append(atividade)
+
+            ultima= atividade
+
+        elif atividade.getHorarioInicio() >= ultima.getHorarioFim():
+
+            selecionadas.append(atividade)
+            ultima = atividade
+
+    return selecionadas
+        
+    
+
+
+
+
 if __name__ == "__main__":
-    ativ= at(
-        nome="Prioridade Inválida",
-        horarioInicio=time(9, 0),
-        horarioFim=time(11, 0),
-        prioridade=5,
-        quantidadeParticipantes=20
-    )
-    print(ativ)
+
+
