@@ -53,6 +53,14 @@ A aplicação gerencia conflitos verificando se o `horário de início` de uma n
 - [x] **Análise de Desempenho:** Comparação de tempo de execução entre Guloso e DP.
 - [x] **Testes Automatizados:** Scripts para cenários Pequeno (8), Médio (15) e Grande (35).
 
+## Referências:
+
+INTZMAYER, Carla Negri; MOTA, Guilherme Oliveira. Análise de Algoritmos e de Estruturas de Dados. Versão de 4 ago. 2023. Universidade Federal do ABC; Universidade de São Paulo. Rascunho em elaboração. Disponível em:https://www.ime.usp.br/~mota/bookFiles/livro_AAED.pdf. 
+
+PERSSON, Aladdin. Weighted Interval Scheduling Algorithm Explained. YouTube, 15 fev. 2020. Disponível em: https://www.youtube.com/watch?v=iIX1YvbLbvc. 
+
+QUEM DISSE, Carla. Algoritmos gulosos e Problema das Tarefas Compatíveis. YouTube, 5 maio 2020. Disponível em: https://www.youtube.com/watch?v=PCMcGPknMwk. 
+
 ## Tecnologias
 - Python 3
 
@@ -67,6 +75,7 @@ A aplicação gerencia conflitos verificando se o `horário de início` de uma n
 
 ## Estrutura do Projeto
 - `src/models/`: Definição da classe Atividade.
+- `src/dynamicProgramming/`: Lógica da programação dinâmica
 - `src/sorting/`: Implementação do Merge Sort.
 - `src/greedy/`: Lógica do Algoritmo Guloso.
 - `src/tests/modelsTest/`: Lógica da Programação Dinâmica e testes de unidade.
