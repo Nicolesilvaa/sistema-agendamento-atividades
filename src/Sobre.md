@@ -75,6 +75,7 @@ QUEM DISSE, Carla. Algoritmos gulosos e Problema das Tarefas Compatíveis. YouTu
 
 ## Estrutura do Projeto
 - `src/models/`: Definição da classe Atividade.
+- `src/dynamicProgramming/`: Lógica da programação dinâmica
 - `src/sorting/`: Implementação do Merge Sort.
 - `src/greedy/`: Lógica do Algoritmo Guloso.
 - `src/tests/modelsTest/`: Lógica da Programação Dinâmica e testes de unidade.
