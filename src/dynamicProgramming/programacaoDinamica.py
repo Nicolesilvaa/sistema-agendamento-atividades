@@ -19,7 +19,7 @@ def programacao_dinamica(atividades, criterio_peso="participantes"):
         pesos = [a.getQuantidadeParticipantes() for a in ordenadas]
 
     # Encontrar o último índice 'p' que não conflita com a atividade i
-    p = [-1] * n
+    p = [-1] * n #guarda o índice da última atividade que não entra em conflito com a atividade i
     for i in range(n):
         for j in range(i - 1, -1, -1):
             if ordenadas[j].getHorarioFim() <= ordenadas[i].getHorarioInicio():
@@ -28,11 +28,11 @@ def programacao_dinamica(atividades, criterio_peso="participantes"):
 
     # Tabela de memoização para o valor máximo
     M = [0] * (n + 1)
-    escolhas = [False] * (n + 1)
+    escolhas = [False] * (n + 1) # registra se a atividade foi escolhida.
 
     for j in range(1, n + 1):
         # Opção 1: Incluir atividade j-1
-        valor_incluir = pesos[j-1] + (M[p[j-1] + 1] if p[j-1] != -1 else 0)
+        valor_incluir = pesos[j-1] + (M[p[j-1] + 1] if p[j-1] != -1 else 0) #Benefício da atividade atual + melhor solução compatível anterior.
         # Opção 2: Não incluir
         valor_excluir = M[j-1]
 
@@ -42,7 +42,7 @@ def programacao_dinamica(atividades, criterio_peso="participantes"):
         else:
             M[j] = valor_excluir
 
-    # Reconstruir a solução
+    # Reconstruir a solução obs crr -> current , atual
     selecionadas = []
     curr = n
     while curr > 0:
@@ -52,4 +52,4 @@ def programacao_dinamica(atividades, criterio_peso="participantes"):
         else:
             curr -= 1
 
-    return selecionadas[::-1]
+    return selecionadas[::-1] # A lista é invertida para ficar em ordem cronológica.
