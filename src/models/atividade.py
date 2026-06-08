@@ -63,11 +63,12 @@ class Atividade:
 
     def __str__(self):
 
-            return (
-                f"Atividade(código={self.__codigo}, "
-                f"nome='{self.__nome}', "
-                f"início='{self.__horarioInicio}', "
-                f"fim='{self.__horarioFim}', "
-                f"prioridade={self.__prioridade}, "
-                f"participantes={self.__quantidadeParticipantes})"
-            )
+            return ( "\n"
+                "┌─────────────────────────────┐\n"
+                f"│ Código: {self.__codigo}\n"
+                f"│ Nome: {self.__nome}\n"
+                f"│ Início: {self.__horarioInicio}\n"
+                f"│ Fim: {self.__horarioFim}\n"
+                f"│ Prioridade: {self.__prioridade.name}\n"
+                f"│ Participantes: {self.__quantidadeParticipantes}\n"
+                "└─────────────────────────────┘")

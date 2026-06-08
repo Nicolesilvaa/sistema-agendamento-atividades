@@ -5,11 +5,6 @@ from src.sorting.MergeSort import merge_sort as msort
 from src.greedy.selecaoGulosa import guloso
 import random
 
-
-
-
-
-
 def gerar_lista_atividades(numero):
 
     atividades= []
@@ -36,11 +31,27 @@ for atv in lista:
     print()
 print("####################################################################")
 
-lista= guloso(lista, "fim")
+lista_selecionada= guloso(lista, "fim")
+
+print(len(lista_selecionada))
+
+for atv in lista_selecionada:
+    print(f"{atv.getNome()} | {atv.getHorarioInicio()} | {atv.getHorarioFim()}")
+    print()
 
 
-print(len(lista))
+lista_selecionada= guloso(lista, "inicio")
 
-for atv in lista:
+print(len(lista_selecionada))
+
+for atv in lista_selecionada:
+    print(f"{atv.getNome()} | {atv.getHorarioInicio()} | {atv.getHorarioFim()}")
+    print()
+
+lista_selecionada= guloso(lista,"prioridade" )
+
+print(len(lista_selecionada))
+
+for atv in lista_selecionada:
     print(f"{atv.getNome()} | {atv.getHorarioInicio()} | {atv.getHorarioFim()}")
     print()

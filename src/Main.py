@@ -14,6 +14,7 @@ YELLOW = "\033[93m"
 RESET = "\033[0m"
 
 def gerar_dados_teste(quantidade):
+    
     atividades = []
     nomes = ["Workshop", "Palestra", "Reunião", "Treinamento", "Brainstorm", "Feedback"]
     for i in range(quantidade):
@@ -77,6 +78,6 @@ if __name__ == "__main__":
     executar_analise("GRANDE", teste_grande)
 
     # Demonstração de Busca
-    menu_busca(teste_grande)
+    #menu_busca(teste_grande)
     
     print(f"\n{GREEN}Projeto executado com sucesso conforme critérios.{RESET}")
