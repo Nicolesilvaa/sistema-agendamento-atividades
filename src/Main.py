@@ -77,7 +77,7 @@ if __name__ == "__main__":
     executar_analise("MÉDIO", teste_medio)
     executar_analise("GRANDE", teste_grande)
 
-    # Demonstração de Busca
-    #menu_busca(teste_grande)
+    #Demonstração de Busca
+    menu_busca(teste_grande)
     
     print(f"\n{GREEN}Projeto executado com sucesso conforme critérios.{RESET}")
