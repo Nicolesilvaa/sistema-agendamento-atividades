@@ -5,6 +5,7 @@ from src.utils.prioridade import Prioridade
 # Códigos de cor ANSI
 GREEN = "\033[92m"
 YELLOW = "\033[93m"
+RED = "\033[91m"
 CYAN = "\033[96m"
 RESET = "\033[0m"
 
@@ -44,7 +45,7 @@ def testarValidacaoHorario():
 
 def testarValidacaoPrioridade():
 
-    print(f"{YELLOW}===== TESTE DE VALIDAÇÃO DE PRIORIDADE ====={RESET}")
+    print(f"{YELLOW}{' TESTE DE VALIDAÇÃO DE PRIORIDADE '.center(80, '=')}{RESET}")
     try:
 
         atividade = Atividade(

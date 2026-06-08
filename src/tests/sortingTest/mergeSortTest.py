@@ -6,11 +6,12 @@ from src.utils.prioridade import Prioridade
 # Códigos de cor ANSI
 GREEN = "\033[92m"
 YELLOW = "\033[93m"
+RED = "\033[91m"
 CYAN = "\033[96m"
 RESET = "\033[0m"
 
 def testarMergeSortNumerico():
-    print(f"{YELLOW}===== TESTE MERGE SORT: NÚMEROS ====={RESET}")
+    print(f"{YELLOW}{' TESTE MERGE SORT: NÚMEROS '.center(80, '=')}{RESET}")
     lista = [38, 27, 43, 3, 9, 82, 10]
     print(f"Original: {CYAN}{lista}{RESET}")
     ordenada = merge_sort(lista)
@@ -19,7 +20,7 @@ def testarMergeSortNumerico():
     print(f"{GREEN}Sucesso!{RESET}\n")
 
 def testarMergeSortCriteriosAtividade():
-    print(f"{YELLOW}===== TESTE MERGE SORT: CRITÉRIOS DE ATIVIDADE ====={RESET}")
+    print(f"{YELLOW}{' TESTE MERGE SORT: CRITÉRIOS DE ATIVIDADE '.center(80, '=')}{RESET}")
     
     a1 = Atividade("Reunião A", time(10, 0), time(12, 0), Prioridade.ALTA, 5)
     a2 = Atividade("Palestra B", time(8, 0), time(9, 30), Prioridade.MEDIA, 20)
@@ -47,7 +48,7 @@ def testarMergeSortCriteriosAtividade():
     print(f"\n{GREEN}Sucesso!{RESET}")
 
 def testarListaVazia():
-    print(f"{YELLOW}===== TESTE MERGE SORT: LISTA VAZIA ====={RESET}")
+    print(f"{YELLOW}{' TESTE MERGE SORT: LISTA VAZIA '.center(80, '=')}{RESET}")
     assert merge_sort([]) == []
     print(f"{GREEN}Sucesso!{RESET}\n")
 

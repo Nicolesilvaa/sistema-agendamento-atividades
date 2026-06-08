@@ -38,6 +38,15 @@ def guloso(atividades, ordenacao= "fim"):
 
 if __name__ == "__main__":
     
+    
+    # Códigos de cor ANSI
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    RED = "\033[91m"
+    CYAN = "\033[96m"
+    RESET = "\033[0m"
+
+    
     def gerar_lista_atividades(numero):
 
         atividades= []
@@ -57,17 +66,22 @@ if __name__ == "__main__":
 
 
     lista= gerar_lista_atividades(10)
-
-    print(len(lista))
+    
+    print()
+    print(f"{CYAN}{' Atividades ordenadas '.center(80, '=')}{RESET}")
+    print("Quantidade de atividades: ",len(lista))
+    print()
+    
     for atv in lista:
         print(atv)
         print()
-    print("####################################################################")
-    
+        
+    print(f"{YELLOW}{'=' * 80}{RESET}")
     lista= guloso(lista, "fim")
 
 
-    print(len(lista))
+    print("Tamanho da lista: ",len(lista))
+    print(f"{CYAN}{' Atividades selecionadas pelo algoritmo guloso '.center(80, '=')}{RESET}")
 
     for atv in lista:
         print(atv.getNome())
