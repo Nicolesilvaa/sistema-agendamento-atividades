@@ -228,21 +228,9 @@ def iniciar_sistema(todas_atividades):
 
 if __name__ == "__main__":
 
-    #print(f"{CYAN}{' SISTEMA DE AGENDAMENTO DE ATIVIDADES '.center(80, '=')}{RESET}")
-
     # Conjuntos de Teste Obrigatórios
     teste_pequeno = gerar_dados_teste(8)
     teste_medio = gerar_dados_teste(15)
     teste_grande = gerar_dados_teste(40)
-
-    #executar_analise("PEQUENO", teste_pequeno)
-    #executar_analise("MÉDIO", teste_medio)
-    #executar_analise("GRANDE", teste_grande)
-
-    # Demonstração de Busca
-    #menu_busca(teste_grande)
-    
-    #print(f"\n{GREEN}Projeto executado com sucesso conforme critérios.{RESET}")
-
 
     iniciar_sistema(teste_medio)
