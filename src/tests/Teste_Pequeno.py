@@ -18,7 +18,7 @@ resultado_guloso= guloso(lista_atv)
 
 resultado_dinamica= programacao_dinamica(lista_atv)
 
-print(f"Resultado guloso: {resultado_guloso[0]} \n Resultado dinamica: {resultado_dinamica[0]}"" )
+print(f"Resultado guloso: {resultado_guloso[0]} \n Resultado dinamica: {resultado_dinamica[0]}")
 
 if __name__ == "__main__":
     pass
