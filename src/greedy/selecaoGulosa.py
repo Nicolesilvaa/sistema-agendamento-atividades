@@ -6,30 +6,24 @@ from src.sorting.MergeSort import merge_sort as msort
 import random
 
 
-def guloso(atividades, ordenacao= "fim"):
+def guloso(atividades, ordenacao="fim"):
 
+    # Escolhe o atributo utilizado na ordenação
     if ordenacao == "prioridade":
-        chave= lambda a: a.getPrioridade()
+        chave = lambda a: a.getPrioridade()
     elif ordenacao == "inicio":
-        chave= lambda a: a.getHorarioInicio()
+        chave = lambda a: a.getHorarioInicio()
     elif ordenacao == "fim":
-        chave= lambda a: a.getHorarioFim()
-    
-    ordenadas = msort(atividades, chave )
+        chave = lambda a: a.getHorarioFim()
+
+    # Ordena e seleciona atividades sem sobreposição de horários
+    ordenadas = msort(atividades, chave)
 
     selecionadas = []
-
     ultima = None
 
     for atividade in ordenadas:
-
-        if ultima is None:
-            selecionadas.append(atividade)
-
-            ultima= atividade
-
-        elif atividade.getHorarioInicio() >= ultima.getHorarioFim():
-
+        if ultima is None or atividade.getHorarioInicio() >= ultima.getHorarioFim():
             selecionadas.append(atividade)
             ultima = atividade
 
