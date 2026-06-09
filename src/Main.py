@@ -29,6 +29,8 @@ def gerar_dados_teste(quantidade):
             prioridade=random.choice(list(Prioridade)),
             quantidadeParticipantes=random.randint(5, 50)
         ))
+
+        print(atividades[-1])
     return atividades
 
 def executar_analise(titulo, lista):
@@ -57,6 +59,7 @@ def executar_analise(titulo, lista):
     print(f"{'P. Dinâmica (Peso)':<25} | {len(res_dp):<15} | {peso_dp:<18} | {tempo_dp:.6f}")
 
 def menu_busca(todas_atividades):
+
     print(f"\n{CYAN}--- BUSCAR ATIVIDADE ---{RESET}")
     termo = input("Digite o nome ou código da atividade: ")
     resultados = buscar_atividades(todas_atividades, termo)

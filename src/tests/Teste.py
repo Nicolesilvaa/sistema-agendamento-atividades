@@ -59,6 +59,7 @@ def executar_analise(titulo, lista, ordenacao="fim"):
     print(f"{'P. Dinâmica (Peso)':<25} | {len(res_dp):<15} | {peso_dp:<18} | {tempo_dp:.6f}")
 
 def menu_busca(todas_atividades):
+
     print(f"\n{CYAN}--- BUSCAR ATIVIDADE ---{RESET}")
     termo = input("Digite o nome ou código da atividade: ")
     resultados = buscar_atividades(todas_atividades, termo)
